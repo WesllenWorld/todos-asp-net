@@ -1,7 +1,11 @@
+using TwTodos.Contexts;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<TwTodosContext>();
 
 var app = builder.Build();
 
