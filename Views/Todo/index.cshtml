@@ -1,0 +1,47 @@
+@model List<TwTodos.Models.Todo>
+
+<h1>@ViewData["Title"]</h1>
+<!--comentário em HTML 
+    use o arroba para invocar estruturas de código e modelos -->
+@{
+    //pode abrir um bloco com @ e comentar usando o C#
+}
+
+@*
+    outra forma de comentar é usar o arroba e asterisco
+*@
+
+@if(Model.Count == 0){
+    <p>Nenhuma tarefa cadastrada no momento 🙃.</p>
+}else {
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Título</th>
+      <th scope="col">Criado em</th>
+      <th scope="col">Data de entrega</th>
+      <th scope="col">Finalizado em</th>
+      <th scope="col">Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach(var todo in Model){
+        <tr>
+            <td>@todo.Id</td>
+            <td>@todo.Title</td>
+            <td>@todo.CreatedAt</td>
+            <td>@todo.Deadline</td>
+            <td>
+                @(todo.FinishedAt.HasValue ? todo.FinishedAt : "Em andamento")
+            </td>
+            <td><a class="btn btn-success btn-sm">Concluir</a></td>
+            <td><a class="btn btn-warning btn-sm">Editar</a></td>
+            <td><a class="btn btn-danger btn-sm">Excluir</a></td>
+        </tr>
+    }
+  </tbody>
+</table>
+
+<td><a asp-controller="Todo" asp-action="Create" class="btn btn-primary btn-sm">Nova tarefa</a></td>
+}
