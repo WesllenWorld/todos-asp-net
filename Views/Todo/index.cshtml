@@ -36,7 +36,7 @@
                 @(todo.FinishedAt.HasValue ? todo.FinishedAt : "Em andamento")
             </td>
             <td><a class="btn btn-success btn-sm">Concluir</a></td>
-            <td><a class="btn btn-warning btn-sm">Editar</a></td>
+            <td><a asp-controller="Todo" asp-action="Edit" asp-route-id="@todo.Id" class="btn btn-warning btn-sm">Editar</a></td>
             <td><a class="btn btn-danger btn-sm">Excluir</a></td>
         </tr>
     }
