@@ -156,3 +156,4 @@ C:\Users\leoeg\Desktop\TwTodos\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite
 C:\Users\leoeg\Desktop\TwTodos\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\leoeg\Desktop\TwTodos\obj\Debug\net8.0\TwTodos.csproj.AssemblyReference.cache
 C:\Users\leoeg\Desktop\TwTodos\obj\Debug\net8.0\TwTodos.csproj.Up2Date
+C:\Users\leoeg\Desktop\TwTodos\obj\Debug\net8.0\TwTodos.sourcelink.json
